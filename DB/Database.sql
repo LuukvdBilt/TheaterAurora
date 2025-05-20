@@ -135,6 +135,7 @@ CREATE TABLE Voorstelling (
     MedewerkerId INT NOT NULL,
     Naam VARCHAR(100) NOT NULL,
     Beschrijving TEXT,
+    AfbeeldingUrl VARCHAR(255),
     Datum DATE NOT NULL,
     Tijd TIME NOT NULL,
     MaxAantalTickets INT NOT NULL,
@@ -151,6 +152,7 @@ CREATE TABLE Voorstelling (
     MedewerkerId,
     Naam,
     Beschrijving,
+    AfbeeldingUrl,
     Datum,
     Tijd,
     MaxAantalTickets,
@@ -165,6 +167,7 @@ VALUES
     1,
     'Theatervoorstelling: De Avondval',
     'Een spannende theateravond over het mysterie van de Avondval.',
+    '../images/avondval.png',
     '2025-06-20',
     '20:00:00',
     150,
@@ -178,6 +181,7 @@ VALUES
     1,
     'Comedy Night: Lachstorm',
     'Een avond vol humor met top cabaretiers.',
+    '../images/lachstorm.png',
     '2025-06-21',
     '21:00:00',
     120,
@@ -191,6 +195,7 @@ VALUES
     1,
     'Muziekavond: Jazz en Meer',
     'Live jazzoptredens van lokale artiesten.',
+    '../images/jazz.png',
     '2025-06-22',
     '19:30:00',
     100,
@@ -204,6 +209,7 @@ VALUES
     1,
     'Kindervoorstelling: De Droomboom',
     'Een magisch verhaal voor kinderen van 4 tot 10 jaar.',
+    '../images/droomboom.png',
     '2025-06-23',
     '14:00:00',
     80,
@@ -217,6 +223,7 @@ VALUES
     1,
     'Dansshow: Ritmes van de Wereld',
     'Een kleurrijke dansvoorstelling met internationale invloeden.',
+    '../images/ritmes.png',
     '2025-06-24',
     '20:30:00',
     200,
@@ -230,6 +237,7 @@ VALUES
     1,
     'Filmavond: Klassiekers in het Theater',
     'Vertoning van een filmklassieker op groot scherm.',
+    '../images/filmklassieker.png',
     '2025-06-25',
     '19:00:00',
     130,
@@ -239,6 +247,7 @@ VALUES
     NOW(6),
     NOW(6)
 );
+
 
 
  
