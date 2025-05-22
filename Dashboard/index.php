@@ -41,7 +41,6 @@
                                     <i class="fa fa-address-card"></i> overzicht
                                 </a>
                             </li>
-                       
                             <li class="nav-item">
                                 <a class="nav-link" href="">
                                     <i class="fa fa-user-circle"></i> overzicht

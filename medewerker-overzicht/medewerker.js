@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const tbody = document.querySelector('#medewerkerTable tbody');
-
     function renderTable() {
         tbody.innerHTML = '';
 

@@ -19,13 +19,6 @@ CREATE TABLE Gebruiker (
     PRIMARY KEY (Id)
 ) ENGINE=InnoDB;
 
-INSERT INTO Gebruiker (Voornaam, Tussenvoegsel, Achternaam, Gebruikersnaam, Wachtwoord, IsIngelogd, Ingelogd, Uitgelogd, Isactief, Opmerking, Datumaangemaakt, Datumgewijzigd)
-VALUES
-('Jan', NULL, 'Jansen', 'jan.jansen', SHA2('password123', 256), 0, NULL, NULL, 1, NULL, NOW(6), NOW(6)),
-('Maria', 'van', 'Dijk', 'maria.vandijk', SHA2('mypass456', 256), 0, NULL, NULL, 1, NULL, NOW(6), NOW(6)),
-('Pieter', NULL, 'de Vries', 'pieter.vries', SHA2('secret789', 256), 0, NULL, NULL, 1, NULL, NOW(6), NOW(6));
-
- 
 
 CREATE TABLE Rol (
     Id INT NOT NULL AUTO_INCREMENT,
@@ -67,12 +60,6 @@ CREATE TABLE Medewerker (
     FOREIGN KEY (GebruikerId) REFERENCES Gebruiker(Id)
 ) ENGINE=InnoDB;
 
-INSERT INTO Medewerker (GebruikerId, Nummer, Medewerkersoort, Isactief, Opmerking, Datumaangemaakt, Datumgewijzigd)
-VALUES
-(1, 1001, 'Fulltime', 1, 'Teamleider', NOW(6), NOW(6)),
-(2, 1002, 'Parttime', 1, 'Assistent', NOW(6), NOW(6)),
-(3, 1003, 'Flexibel', 1, NULL, NOW(6), NOW(6));
- 
 
 CREATE TABLE Bezoeker (
     Id INT NOT NULL AUTO_INCREMENT,
