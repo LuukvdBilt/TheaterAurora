@@ -24,6 +24,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    color: #ffcfcf;
 }
 
 .banner {
@@ -59,8 +60,10 @@ nav a:hover {
     background-color: #222;
     margin: 1rem auto;
     max-width: 800px;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
+    overflow: hidden;
+    height: 110px;
 }
 
 footer {
@@ -86,6 +89,15 @@ footer {
 .voorstellingen {
     flex: 2;
     margin-right: auto;
+    overflow: hidden;
+}
+
+#IMG1, #IMG2, #IMG3, #IMG4{
+    position: relative;
+    width: 190px;
+    float: right;
+    bottom: 110px;
+    padding-right: 300px;
 }
 
 .contact-box {
@@ -128,4 +140,33 @@ footer {
   border-radius: 10px;
   font-size: 24px;
   text-align: center;
+}
+
+#ticket-btn {
+     font-family: Arial, sans-serif;
+     height: 30px;
+     border-radius: 5px;
+     background-color: #111;
+     color: #fff;
+     font-size: medium;
+}
+
+#ticket-btn:hover {
+     background-color: #4f4f4f;
+     color: #e0d1d1;
+}
+
+#Introductie {
+    position: relative;
+    right: -520px;
+    top: -100px;
+    width: 300px;
+}
+
+#tickets-over {
+    position: relative;
+    right: -520px;
+    top: -160px;
+    width: 300px;
+    font-weight: bold;
 }
