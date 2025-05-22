@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    background-color: #8B0000;
+    padding: 1rem;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     overflow: hidden;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcfcf;
+}
+
+.banner {
+    background-image: url('https://scpr.brightspotcdn.com/dims4/default/9bd8fd3/2147483647/strip/true/crop/6000x4000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fscpr-brightspot.s3.us-west-2.amazonaws.com%2F76%2F3a%2F53c8cf7f4f5a8a58e66153f0d911%2Frevival-houses-academy-museum-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    font-size: 2rem;
+}
+
+.bannerItems{
+    position: relative;
+    padding-top: 6.5em;
+    width: 600px;
+    float: right;
+}
+
+#Banneritem1 {
+    float: right;
+    margin: 0;
+    height: 80px;
+    width: 600px;
+    color: #eee1e1;
+    background-color: rgb(145, 22, 22, 0.6);
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Banneritem2 {
+    float: right;
+    margin: 0;
+    height: 50px;
+    width: 400px;
+    color: #ffffff;
+    background-color: rgba(106, 15, 15, 0.6);
+    opacity: 90%;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+#Banneritem1:hover, #Banneritem2:hover{
+    color: #fff;
+    background-color: rgba(106, 15, 15, 0.4);
+}
+
+.voorstellingen {
+    padding: 2rem;
+    background-color: #111;
+}
+
+.voorstellingen h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.voorstelling {
+    background-color: #222;
+    margin: 1rem auto;
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 110px;
+}
+
+footer {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    overflow: hidden;
+    height: 60px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #111;
+    flex-wrap: wrap;
+}
+
+.voorstellingen {
+    flex: 2;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#IMG1, #IMG2, #IMG3, #IMG4{
+    position: relative;
+    width: 190px;
+    float: right;
+    bottom: 110px;
+    padding-right: 300px;
+}
+
+.contact-box {
+    flex: 1;
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    max-width: 300px;
+}
+
+#LOGO {
+    position: relative;
+    width: 80px;
+}
+
+#Logo-footer {
+    position: relative;
+    width: 80px;
+    float: left;
+    bottom: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255); 
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.error-message {
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#ticket-btn {
+     font-family: Arial, sans-serif;
+     height: 30px;
+     border-radius: 5px;
+     background-color: #111;
+     color: #fff;
+     font-size: medium;
+}
+
+#ticket-btn:hover {
+     background-color: #4f4f4f;
+     color: #e0d1d1;
+}
+
+#Introductie {
+    position: relative;
+    right: -520px;
+    top: -100px;
+    width: 300px;
+}
+
+#tickets-over {
+    position: relative;
+    right: -520px;
+    top: -160px;
+    width: 300px;
+    font-weight: bold;
+}
