@@ -1,8 +1,7 @@
 DROP DATABASE IF EXISTS AuroraDB;
 CREATE DATABASE IF NOT EXISTS AuroraDB;
 USE AuroraDB;
- 
- 
+
 CREATE TABLE Gebruiker (
     Id INT NOT NULL AUTO_INCREMENT,
     Voornaam VARCHAR(50) NOT NULL,
@@ -38,7 +37,6 @@ VALUES
 ('Tom', NULL, 'Smit', 'tommyboy', 'Fiets_73', 0, 1, NOW(6), NOW(6)),
 ('Lotte', 'van', 'Dijk', 'lotte.vdijk', 'Boswandeling55', 0, 1, NOW(6), NOW(6));
 
- 
 CREATE TABLE Rol (
     Id INT NOT NULL AUTO_INCREMENT,
     GebruikerId INT NOT NULL,
@@ -50,8 +48,7 @@ CREATE TABLE Rol (
     PRIMARY KEY (Id),
     FOREIGN KEY (GebruikerId) REFERENCES Gebruiker(Id)
 ) ENGINE=InnoDB;
- 
- 
+
 CREATE TABLE Contact (
     Id INT NOT NULL AUTO_INCREMENT,
     GebruikerId INT NOT NULL,
@@ -64,8 +61,7 @@ CREATE TABLE Contact (
     PRIMARY KEY (Id),
     FOREIGN KEY (GebruikerId) REFERENCES Gebruiker(Id)
 ) ENGINE=InnoDB;
- 
- 
+
 CREATE TABLE Medewerker (
     Id INT NOT NULL AUTO_INCREMENT,
     GebruikerId INT NOT NULL,
@@ -120,10 +116,7 @@ VALUES (
     NOW(6),
     NOW(6)
 );
- 
- 
 
- 
 CREATE TABLE Bezoeker (
     Id INT NOT NULL AUTO_INCREMENT,
     GebruikerId INT NOT NULL,
@@ -151,7 +144,6 @@ VALUES
 (5, 2004, 1, 'Studententarief', NOW(6), NOW(6)),
 (6, 2005, 1, 'Nieuw lid via nieuwsbrief', NOW(6), NOW(6));
 
- 
 CREATE TABLE Prijs (
     Id INT NOT NULL AUTO_INCREMENT,
     Tarief DECIMAL(5,2) NOT NULL,
@@ -161,8 +153,7 @@ CREATE TABLE Prijs (
     Datumgewijzigd DATETIME(6) NOT NULL,
     PRIMARY KEY (Id)
 ) ENGINE=InnoDB;
- 
- 
+
 CREATE TABLE Voorstelling (
     Id INT NOT NULL AUTO_INCREMENT,
     MedewerkerId INT NOT NULL,
@@ -180,8 +171,8 @@ CREATE TABLE Voorstelling (
     PRIMARY KEY (Id),
     FOREIGN KEY (MedewerkerId) REFERENCES Medewerker(Id)
 ) ENGINE=InnoDB;
- 
- INSERT INTO Voorstelling (
+
+INSERT INTO Voorstelling (
     MedewerkerId,
     Naam,
     Beschrijving,
@@ -281,9 +272,6 @@ VALUES
     NOW(6)
 );
 
-
-
- 
 CREATE TABLE Ticket (
     Id INT NOT NULL AUTO_INCREMENT,
     BezoekerId INT NOT NULL,
@@ -303,8 +291,7 @@ CREATE TABLE Ticket (
     FOREIGN KEY (VoorstellingId) REFERENCES Voorstelling(Id),
     FOREIGN KEY (PrijsId) REFERENCES Prijs(Id)
 ) ENGINE=InnoDB;
- 
- 
+
 CREATE TABLE Melding (
     Id INT NOT NULL AUTO_INCREMENT,
     BezoekerId INT,
@@ -337,4 +324,4 @@ VALUES
 (3, NULL, 3002, 'Ervaring', 'Heel gezellig, maar het geluid mocht wat harder.', 1, 'Geluid niet optimaal', NOW(6), NOW(6)),
 (4, NULL, 3003, 'Feedback', 'Kindervoorstelling was erg leuk voor mijn dochter van 6.', 1, 'Ouders met kinderen', NOW(6), NOW(6)),
 (5, NULL, 3004, 'Ervaring', 'Ik vond het lastig om parkeergelegenheid te vinden.', 1, 'Parkeerprobleem', NOW(6), NOW(6)),
-(6, NULL, 3005, 'Feedback', 'Goede organisatie en fijne sfeer in het theater.', 1, 'Algemene tevredenheid', NOW(6), NOW(6));
+(5, NULL, 3005, 'Feedback', 'Goede organisatie en fijne sfeer in het theater.', 1, 'Algemene tevredenheid', NOW(6), NOW(6));
