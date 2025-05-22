@@ -19,7 +19,25 @@ CREATE TABLE Gebruiker (
     Datumgewijzigd DATETIME(6) NOT NULL,
     PRIMARY KEY (Id)
 ) ENGINE=InnoDB;
- 
+
+INSERT INTO Gebruiker (
+    Voornaam,
+    Tussenvoegsel,
+    Achternaam,
+    Gebruikersnaam,
+    Wachtwoord,
+    IsIngelogd,
+    Isactief,
+    Datumaangemaakt,
+    Datumgewijzigd
+)
+VALUES
+('Sophie', NULL, 'Jansen', 'sophiej', 'Tulpen98!', 0, 1, NOW(6), NOW(6)),
+('Mark', 'de', 'Vries', 'markdevries', 'Storm21#', 0, 1, NOW(6), NOW(6)),
+('Anna', NULL, 'Bakker', 'annab', 'Zomer2024$', 0, 1, NOW(6), NOW(6)),
+('Tom', NULL, 'Smit', 'tommyboy', 'Fiets_73', 0, 1, NOW(6), NOW(6)),
+('Lotte', 'van', 'Dijk', 'lotte.vdijk', 'Boswandeling55', 0, 1, NOW(6), NOW(6));
+
  
 CREATE TABLE Rol (
     Id INT NOT NULL AUTO_INCREMENT,
@@ -117,7 +135,22 @@ CREATE TABLE Bezoeker (
     PRIMARY KEY (Id),
     FOREIGN KEY (GebruikerId) REFERENCES Gebruiker(Id)
 ) ENGINE=InnoDB;
- 
+
+INSERT INTO Bezoeker (
+    GebruikerId,
+    Relatienummer,
+    Isactief,
+    Opmerking,
+    Datumaangemaakt,
+    Datumgewijzigd
+)
+VALUES
+(2, 2001, 1, 'Standaard bezoeker', NOW(6), NOW(6)),
+(3, 2002, 1, 'Trouwe bezoeker', NOW(6), NOW(6)),
+(4, 2003, 1, 'Komt vaak met familie', NOW(6), NOW(6)),
+(5, 2004, 1, 'Studententarief', NOW(6), NOW(6)),
+(6, 2005, 1, 'Nieuw lid via nieuwsbrief', NOW(6), NOW(6));
+
  
 CREATE TABLE Prijs (
     Id INT NOT NULL AUTO_INCREMENT,
@@ -287,3 +320,21 @@ CREATE TABLE Melding (
     FOREIGN KEY (BezoekerId) REFERENCES Bezoeker(Id),
     FOREIGN KEY (MedewerkerId) REFERENCES Medewerker(Id)
 ) ENGINE=InnoDB;
+
+INSERT INTO Melding (
+    BezoekerId,
+    MedewerkerId,
+    Nummer,
+    Type,
+    Bericht,
+    Isactief,
+    Opmerking,
+    Datumaangemaakt,
+    Datumgewijzigd
+)
+VALUES
+(2, NULL, 3001, 'Feedback', 'De voorstelling was prachtig! Mooie belichting en decor.', 1, 'Positieve feedback', NOW(6), NOW(6)),
+(3, NULL, 3002, 'Ervaring', 'Heel gezellig, maar het geluid mocht wat harder.', 1, 'Geluid niet optimaal', NOW(6), NOW(6)),
+(4, NULL, 3003, 'Feedback', 'Kindervoorstelling was erg leuk voor mijn dochter van 6.', 1, 'Ouders met kinderen', NOW(6), NOW(6)),
+(5, NULL, 3004, 'Ervaring', 'Ik vond het lastig om parkeergelegenheid te vinden.', 1, 'Parkeerprobleem', NOW(6), NOW(6)),
+(6, NULL, 3005, 'Feedback', 'Goede organisatie en fijne sfeer in het theater.', 1, 'Algemene tevredenheid', NOW(6), NOW(6));
