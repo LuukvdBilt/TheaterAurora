@@ -1,9 +1,6 @@
 <?php
-
-
 // Database connection
 require_once "../config/db_connect.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +43,7 @@ require_once "../config/db_connect.php";
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="">
-                                    <i class="fa fa-address-card"></i> overzicht
+                                    <i class="fa fa-address-card"></i> overzicht 
                                 </a>
                             </li>
                        
