@@ -77,7 +77,23 @@ try {
             padding: 2rem;
         }
 
-        /* Responsiveness */
+        .beschikbaarheid {
+            font-weight: bold;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .beschikbaar {
+            background-color: #2ecc71;
+            color: #111;
+        }
+
+        .niet-beschikbaar {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
         @media (max-width: 1000px) {
             .container {
                 grid-template-columns: repeat(2, 1fr);
@@ -108,13 +124,22 @@ try {
             </div>
         <?php else: ?>
             <?php foreach ($voorstellingen as $voorstelling): ?>
+                <?php
+                    $beschikbaarheid = strtolower($voorstelling['Beschikbaarheid']);
+                    $beschikbaarClass = $beschikbaarheid === 'beschikbaar' ? 'beschikbaar' : 'niet-beschikbaar';
+                ?>
                 <div class="kaart">
                     <img src="<?= htmlspecialchars($voorstelling['AfbeeldingUrl']) ?>" alt="Afbeelding voorstelling">
                     <h3><?= htmlspecialchars($voorstelling['Naam']) ?></h3>
                     <p><strong><?= date('d-m-Y', strtotime($voorstelling['Datum'])) ?> om <?= date('H:i', strtotime($voorstelling['Tijd'])) ?></strong></p>
                     <p><?= nl2br(htmlspecialchars($voorstelling['Beschrijving'])) ?></p>
                     <p><strong>Tickets:</strong> <?= htmlspecialchars($voorstelling['MaxAantalTickets']) ?></p>
-                    <p><strong>Beschikbaarheid:</strong> <?= htmlspecialchars($voorstelling['Beschikbaarheid']) ?></p>
+                    <p>
+                        <strong>Beschikbaarheid:</strong>
+                        <span class="beschikbaarheid <?= $beschikbaarClass ?>">
+                            <?= htmlspecialchars($voorstelling['Beschikbaarheid']) ?>
+                        </span>
+                    </p>
                     <?php if (!empty($voorstelling['Opmerking'])): ?>
                         <p><em><?= htmlspecialchars($voorstelling['Opmerking']) ?></em></p>
                     <?php endif; ?>
