@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Theater Homepagina</title>
-
 </head>
 <body>
+    <div class="overlay" id="overlay" style="display:none;">
+    <div class="error-message" id="error-message">
+      <h1 class="w3-xxlarge w3-text-black"><strong>Pagina niet beschikbaar</strong></h1>
+      <p class="w3-text-black">Sorry, de site is tijdelijk niet beschikbaar vanwege onderhoud. Kom later nog eens terug.</p>
+      <p class="w3-text-black">Onze excuses voor het ongemak.</p>
+    </div>
+  </div>
   <nav>
     <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
     <div>
@@ -52,5 +58,6 @@
      <div class="logo"> <img src="/Images/Theater-logo.png" id="Logo-footer"></div>
     <p>&copy; 2025 Aurora Theater. Alle rechten voorbehouden.</p>
   </footer>
+  <script src="java.js"></script>
 </body>
 </html>
