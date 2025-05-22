@@ -31,20 +31,47 @@ nav a:hover {
     background-image: url('https://scpr.brightspotcdn.com/dims4/default/9bd8fd3/2147483647/strip/true/crop/6000x4000+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fscpr-brightspot.s3.us-west-2.amazonaws.com%2F76%2F3a%2F53c8cf7f4f5a8a58e66153f0d911%2Frevival-houses-academy-museum-1.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    height: 500px;
     font-size: 2rem;
 }
 
-.banner h1 {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    border-radius: 10px;
+.bannerItems{
+    position: relative;
+    padding-top: 6.5em;
+    width: 600px;
+    float: right;
 }
 
+#Banneritem1 {
+    float: right;
+    margin: 0;
+    height: 80px;
+    width: 600px;
+    color: #eee1e1;
+    background-color: rgb(145, 22, 22, 0.6);
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Banneritem2 {
+    float: right;
+    margin: 0;
+    height: 50px;
+    width: 400px;
+    color: #ffffff;
+    background-color: rgba(106, 15, 15, 0.6);
+    opacity: 90%;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+#Banneritem1:hover, #Banneritem2:hover{
+    color: #fff;
+    background-color: rgba(106, 15, 15, 0.4);
+}
 
 .voorstellingen {
     padding: 2rem;
