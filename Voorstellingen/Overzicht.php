@@ -112,7 +112,7 @@ try {
     <nav>
     <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
     <div>
-      <a href="index.html">Home</a>
+      <a href="../HomePagina/index.html">Home</a>
       <a href="">Voorstellingen</a>
       <a href="">Contact</a>
       <a href="">Login</a>
