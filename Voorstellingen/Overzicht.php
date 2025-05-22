@@ -22,6 +22,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Voorstellingen</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-color: #111;
@@ -108,6 +109,15 @@ try {
     </style>
 </head>
 <body>
+    <nav>
+    <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="">Voorstellingen</a>
+      <a href="">Contact</a>
+      <a href="">Login</a>
+    </div>
+  </nav>
 
 <?php if ($dbFout): ?>
     <div class="centered-message">
