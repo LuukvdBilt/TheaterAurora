@@ -97,7 +97,6 @@ require_once "../config/db_connect.php";
                         <table id="medewerkerTable" class="table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Nummer</th>
                                     <th>Soort</th>
                                     <th>Status</th>
