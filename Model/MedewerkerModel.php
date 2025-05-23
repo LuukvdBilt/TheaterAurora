@@ -32,7 +32,7 @@ class MedewerkerModel
 
             return $medewerkers;
         } catch (PDOException $e) {
-            // Log fout (optioneel)
+            // Log fout 
             throw new Exception("Fout bij ophalen medewerkers: " . $e->getMessage());
         }
     }
