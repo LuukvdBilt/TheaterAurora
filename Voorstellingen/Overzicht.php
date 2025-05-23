@@ -130,17 +130,17 @@ try {
 <body>
     <!-- Navigatiebalk bovenaan de pagina -->
     <nav>
-        <div class="logo">
-            <img src="/Images/Theater-logo.png" id="LOGO">
-        </div>
-        <div>
-            <a href="../HomePagina/index.html">Home</a>
-            <a href="../Voorstellingen/Overzicht.php">Voorstellingen</a>
-            <a href="#">Contact</a>
-            <a href="../Dashboard/index.php">Dashboard</a>
-            <a href="#">Login</a>
-        </div>
-    </nav>
+    <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
+    <div>
+      <a href="../HomePagina/index.html">Home</a>
+      <a href="../Voorstellingen/Overzicht.php">Voorstellingen</a>
+      <a href="#">Contact</a>
+      <a href="../Dashboard/index.php">Dashboard</a>
+       <a href="../Tickets/tickets.html">Tickets</a>
+      <a href="#">Login</a>
+      <a href="#">Uitloggen</a>
+    </div>
+  </nav>
 
 <?php if ($dbFout): ?>
     <!-- Toon foutmelding als database niet bereikbaar is -->
