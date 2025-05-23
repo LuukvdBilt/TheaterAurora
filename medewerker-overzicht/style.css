@@ -68,3 +68,84 @@ th {
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgb(209, 25, 25);
 }
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px; 
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        height: auto;
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .sidebar .nav-link {
+        font-size: 14px;
+        padding: 8px 10px;
+        display: block;
+    }
+
+    .menu-header {
+        padding: 8px 10px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px 5px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #1a1a1a;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        color: #f4f4f4;
+        white-space: normal;
+    }
+
+    td::before {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+        color: #dc3545;
+    }
+
+    button.btn {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1.75rem auto;
+    }
+}
