@@ -83,7 +83,6 @@ declare(strict_types=1);
 require_once '../config/db_connect.php';
 
 try {
-    // Query met JOIN voorbeeld (stel je hebt een 'afdeling' tabel met afdeling_naam)
     $sql = 'SELECT m.id, m.nummer, m.soort, m.status, m.opmerking, m.aangemaakt, m.gewijzigd, a.afdeling_naam
             FROM medewerkers m
             LEFT JOIN afdeling a ON m.afdeling_id = a.id
@@ -94,7 +93,6 @@ try {
 
     $medewerkers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    // Foutafhandeling met melding (unhappy scenario)
     echo '<div class="alert alert-danger" role="alert">';
     echo 'Er is een fout opgetreden bij het ophalen van de medewerkers: ' . htmlspecialchars($e->getMessage());
     echo '</div>';
