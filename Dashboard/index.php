@@ -25,20 +25,20 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="../registratie/dashboard.php">
+                            <a class="nav-link" href="#">
                                 <i class="fa fa-home"></i> Dashboard
                             </a>
                         </li>
 
                         <div class="menu-header">Overzichten</div>
                             <li class="nav-item">
-                                <a class="nav-link" href="../medewerker-overzicht/medewerkers_overzicht.php">
+                                <a class="nav-link" href="../views/medewerkers_overzicht.php">
                                     <i class="fa fa-users"></i> Medewerker-overzicht
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="">
-                                    <i class="fa fa-address-card"></i> overzicht
+                                <a class="nav-link " href="../account/account/accountOverzicht.php">
+                                    <i class="fa fa-address-card"></i> Account-overzicht
                                 </a>
                             </li>
                             <li class="nav-item">

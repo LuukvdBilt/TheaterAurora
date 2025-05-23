@@ -12,7 +12,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Zorgt dat nav links en menu netjes op kleinere schermen */
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -20,7 +20,7 @@ nav a {
     text-decoration: none;
     margin: 0 0.5rem;
     font-weight: bold;
-    white-space: nowrap; /* voorkomt dat menu items afbreken */
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 .voorstellingen {
-    flex: 1 1 600px; /* neemt minimaal 600px, maar kan krimpen */
+    flex: 1 1 600px; 
     background-color: #111;
 }
 
@@ -136,7 +136,7 @@ nav a:hover {
 }
 
 .contact-box {
-    flex: 1 1 280px; /* minimaal 280px, flexibel */
+    flex: 1 1 280px; 
     background-color: #222;
     padding: 1rem;
     border-radius: 10px;
@@ -183,7 +183,7 @@ footer .logo img {
     text-align: center;
 }
 
-/* MEDIA QUERIES voor kleine schermen */
+
 
 @media (max-width: 900px) {
     .banner {

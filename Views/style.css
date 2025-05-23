@@ -1,0 +1,151 @@
+body {
+    background-color: black;
+    color: #f4f4f4;
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+}
+th { 
+    background-color: #f4f4f4; 
+}
+.inactive { 
+    color: red; 
+}
+.active { 
+    color: green; 
+}
+.sidebar {
+     background-color: #8B0000;
+    color: white;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+.sidebar .nav-link {
+    color: rgba(255,255,255,.75);
+}
+.sidebar .nav-link:hover {
+    color: rgba(255,255,255,1);
+}
+.sidebar .nav-link.active {
+    color: white;
+    font-weight: bold;
+}
+.role-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.role-admin {
+    background-color: #dc3545;
+    color: white;
+}
+.role-medewerker {
+    background-color: #28a745;
+    color: white;
+}
+.menu-header {
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+.dashboard-card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgb(209, 25, 25);
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px; 
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        height: auto;
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .sidebar .nav-link {
+        font-size: 14px;
+        padding: 8px 10px;
+        display: block;
+    }
+
+    .menu-header {
+        padding: 8px 10px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px 5px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #1a1a1a;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        color: #f4f4f4;
+        white-space: normal;
+    }
+
+    td::before {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+        color: #dc3545;
+    }
+
+    button.btn {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1.75rem auto;
+    }
+}
