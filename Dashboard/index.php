@@ -25,7 +25,7 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="../registratie/dashboard.php">
+                            <a class="nav-link" href="#">
                                 <i class="fa fa-home"></i> Dashboard
                             </a>
                         </li>

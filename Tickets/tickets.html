@@ -11,22 +11,22 @@
       background-color: #111;
       color: white;
     }
-
+ 
     header {
       background-color: #8b0000;
       padding: 20px;
       text-align: center;
     }
-
+ 
     header h1 {
       margin: 0;
       font-size: 2em;
     }
-
+ 
     .container {
       padding: 20px;
     }
-
+ 
     .show {
       display: flex;
       background-color: #222;
@@ -34,32 +34,32 @@
       border-radius: 10px;
       overflow: hidden;
     }
-
+ 
     .show img {
       width: 250px;
       height: 160px;
       object-fit: cover;
     }
-
+ 
     .show-details {
       padding: 15px;
       flex: 1;
     }
-
+ 
     .show-details h2 {
       margin-top: 0;
     }
-
+ 
     .info {
       margin-top: 10px;
       margin-bottom: 10px;
     }
-
+ 
     .prijs {
       font-weight: bold;
       color: #f00;
     }
-
+ 
     .button {
       background-color: black;
       color: white;
@@ -71,30 +71,30 @@
       transition: background-color 0.3s;
       cursor: pointer;
     }
-
+ 
     .button:hover {
       background-color: #f00;
       border-color: #f00;
     }
-
+ 
     .message {
       margin-top: 10px;
       font-weight: bold;
     }
-
+ 
     .success {
       color: #00ff00;
     }
-
+ 
     .error {
       color: #ff3333;
     }
-
+ 
     .ticket-form {
       margin-top: 10px;
       display: none;
     }
-
+ 
     .ticket-form input {
       padding: 8px;
       margin-bottom: 10px;
@@ -106,13 +106,13 @@
   </style>
 </head>
 <body>
-
+ 
 <header>
   <h1>Aankomende Voorstellingen</h1>
 </header>
-
+ 
 <div class="container">
-
+ 
   <!-- De Avondval (happy) -->
   <div class="show">
     <img src="/Images/avondval.png" alt="De Avondval">
@@ -130,7 +130,7 @@
       </form>
     </div>
   </div>
-
+ 
   <!-- Lachstorm (unhappy) -->
   <div class="show">
     <img src="/Images/lachstorm.png" alt="ComedyNight">
@@ -143,7 +143,7 @@
       <div id="message-lachstorm" class="message"></div>
     </div>
   </div>
-
+ 
   <!-- Jazz (happy) -->
   <div class="show">
     <img src="/Images/jazz.png" alt="Jazz en meer">
@@ -161,7 +161,7 @@
       </form>
     </div>
   </div>
-
+ 
   <!-- DroomBoom (unhappy) -->
   <div class="show">
     <img src="/Images/droomboom.png" alt="KinderAvond">
@@ -174,7 +174,7 @@
       <div id="message-droomboom" class="message"></div>
     </div>
   </div>
-
+ 
   <!-- Filmklassieker (happy) -->
   <div class="show">
     <img src="/Images/filmklassieker.png" alt="Filmklassieker">
@@ -192,7 +192,7 @@
       </form>
     </div>
   </div>
-
+ 
   <!-- Ritmes (unhappy) -->
   <div class="show">
     <img src="/Images/ritmes.png" alt="Ritmes">
@@ -205,21 +205,21 @@
       <div id="message-ritmes" class="message"></div>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <script>
   function bestelTickets(show) {
     const successShows = ['avondval', 'jazz', 'filmklassieker'];
     const errorShows = ['lachstorm', 'droomboom', 'ritmes'];
-
+ 
     // Reset alle formulieren en meldingen
     document.querySelectorAll('.message').forEach(m => m.textContent = '');
     document.querySelectorAll('.ticket-form').forEach(f => f.style.display = 'none');
-
+ 
     const messageDiv = document.getElementById(`message-${show}`);
     const form = document.getElementById(`form-${show}`);
-
+ 
     if (successShows.includes(show)) {
       messageDiv.textContent = "Tickets beschikbaar. Vul het formulier in:";
       messageDiv.className = 'message success';
@@ -229,17 +229,17 @@
       messageDiv.className = 'message error';
     }
   }
-
+ 
   function bevestigBestelling(show) {
     const messageDiv = document.getElementById(`message-${show}`);
     const form = document.getElementById(`form-${show}`);
-
+ 
     messageDiv.textContent = "Bedankt! Uw bestelling is bevestigd.";
     messageDiv.className = 'message success';
     if (form) form.style.display = 'none';
     return false;
   }
 </script>
-
+ 
 </body>
 </html>
