@@ -180,6 +180,7 @@ require_once "../config/db_connect.php";
                 alert("Er is een fout opgetreden.");
             });
         }
+        
     </script>
     <script defer src="medewerker.js"></script>
 </body>

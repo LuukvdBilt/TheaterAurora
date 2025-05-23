@@ -14,6 +14,7 @@ try {
         ORDER BY m.Id ASC
     ");
 
+    
     // Zet resultaat om naar associatieve array
     $medewerkers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
