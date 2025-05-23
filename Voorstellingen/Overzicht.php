@@ -113,9 +113,10 @@ try {
     <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
     <div>
       <a href="../HomePagina/index.html">Home</a>
-      <a href="">Voorstellingen</a>
-      <a href="">Contact</a>
-      <a href="">Login</a>
+      <a href="../Voorstellingen/Overzicht.php">Voorstellingen</a>
+      <a href="#">Contact</a>
+      <a href="../Dashboard/index.php">Dashboard</a>
+      <a href="#">Login</a>
     </div>
   </nav>
 
