@@ -37,8 +37,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="">
-                                    <i class="fa fa-address-card"></i> overzicht
+                                <a class="nav-link " href="../account/account/accountOverzicht.php">
+                                    <i class="fa fa-address-card"></i> Account-overzicht
                                 </a>
                             </li>
                             <li class="nav-item">
