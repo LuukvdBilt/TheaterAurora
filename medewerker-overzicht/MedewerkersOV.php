@@ -93,24 +93,22 @@ require_once "../config/db_connect.php";
                                 Nieuwe Medewerker Toevoegen
                             </button>
                         </div>
-                       <table id="medewerkerTable" class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nummer</th>
-                                <th>Medewerkersoort</th>
-                                <th>Status</th>
-                                <th>Opmerking</th>
-                                <th>Aangemaakt op</th>
-                                <th>Gewijzigd op</th>
-                                <th>Acties</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Rows get inserted here by JS -->
-                        </tbody>
-                    </table>
-
+                      <div id="feedback"></div>
+                        <table id="medewerkerTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nummer</th>
+                                    <th>Soort</th>
+                                    <th>Status</th>
+                                    <th>Opmerking</th>
+                                    <th>Aangemaakt</th>
+                                    <th>Gewijzigd</th>
+                                    <th>Acties</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
                 </div>
             </main>

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dummydata om te simuleren (kan later via fetch vervangen worden)
     let dummyData = [
         {
             Id: 1,
@@ -27,11 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const tbody = document.querySelector('#medewerkerTable tbody');
+    const feedbackBox = document.querySelector('#feedback'); // Een div voor meldingen
+
+    /**
+     * Genereert de rijen van de medewerkers-tabel
+     */
     function renderTable() {
         tbody.innerHTML = '';
 
         if (dummyData.length === 0) {
             tbody.innerHTML = `<tr><td colspan="8" class="text-center">Er zijn geen Medewerkers geregistreerd.</td></tr>`;
+            showFeedback("Geen medewerkers gevonden.", "warning");
             return;
         }
 
@@ -52,15 +59,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 </td>
             `;
 
-            // Add event listener to delete button
+            // Voeg klik-event toe om medewerker te verwijderen
             tr.querySelector('.btn-delete').addEventListener('click', () => {
-                // Remove medewerker from dummyData by Id
                 dummyData = dummyData.filter(m => m.Id !== medewerker.Id);
                 renderTable();
+                showFeedback(`Medewerker met ID ${medewerker.Id} verwijderd.`, "success");
             });
 
             tbody.appendChild(tr);
         });
+    }
+
+    /**
+     * Laat feedback zien aan de gebruiker
+     * @param {string} message - De tekst van de melding
+     * @param {string} type - Bootstrap type: success | danger | warning
+     */
+    function showFeedback(message, type = 'info') {
+        feedbackBox.innerHTML = `
+            <div class="alert alert-${type}" role="alert">
+                ${message}
+            </div>
+        `;
+        setTimeout(() => feedbackBox.innerHTML = '', 2000); // Verdwijn na 2 sec
     }
 
     renderTable();
