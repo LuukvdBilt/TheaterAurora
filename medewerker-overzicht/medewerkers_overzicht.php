@@ -52,14 +52,14 @@ require_once "../config/db_connect.php";
                                     <i class="fa fa-user-circle"></i> overzicht
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                             <li class="nav-item">
+                                <a class="nav-link" href="../Voorstellingen/Overzicht.php">
                                     <i class="fa fa-line-chart"></i>Voorstellingen
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-calendar-check-o"></i> Tickets
+                                <a class="nav-link" href="../ticket scanner/index.html">
+                                    <i class="fa fa-calendar-check-o"></i> Ticket scanner
                                 </a>
                             </li>
 
