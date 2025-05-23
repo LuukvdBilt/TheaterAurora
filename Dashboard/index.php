@@ -32,7 +32,7 @@
 
                         <div class="menu-header">Overzichten</div>
                             <li class="nav-item">
-                                <a class="nav-link" href="../medewerker-overzicht/MedewerkersOV.php">
+                                <a class="nav-link" href="../medewerker-overzicht/medewerkers_overzicht.php">
                                     <i class="fa fa-users"></i> Medewerker-overzicht
                                 </a>
                             </li>
