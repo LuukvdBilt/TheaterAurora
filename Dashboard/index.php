@@ -52,8 +52,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-calendar-check-o"></i> Tickets
+                                <a class="nav-link" href="../ticket scanner/index.html">
+                                    <i class="fa fa-calendar-check-o"></i> Ticket scanner
                                 </a>
                             </li>
 

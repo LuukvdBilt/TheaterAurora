@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theater Tickets Overzicht</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      background-color: #8b0000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .show {
+      display: flex;
+      background-color: #222;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .show img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .show-details {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .show-details h2 {
+      margin-top: 0;
+    }
+
+    .info {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .prijs {
+      font-weight: bold;
+      color: #f00;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      padding: 10px 15px;
+      border: 1px solid white;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #f00;
+      border-color: #f00;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .success {
+      color: #00ff00;
+    }
+
+    .error {
+      color: #ff3333;
+    }
+
+    .ticket-form {
+      margin-top: 10px;
+      display: none;
+    }
+
+    .ticket-form input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 90%;
+      max-width: 300px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Aankomende Voorstellingen</h1>
+</header>
+
+<div class="container">
+
+  <!-- De Avondval (happy) -->
+  <div class="show">
+    <img src="/Images/avondval.png" alt="De Avondval">
+    <div class="show-details">
+      <h2>Voorstelling - De Avondval</h2>
+      <p class="info">Datum: 20-06-2025 om 20:00</p>
+      <p>“Een spannende theateravond over het mysterie van de AvondVal.”</p>
+      <p class="prijs">Tickets: €150</p>
+      <button class="button" onclick="bestelTickets('avondval')">Bestel tickets</button>
+      <div id="message-avondval" class="message"></div>
+      <form id="form-avondval" class="ticket-form" onsubmit="return bevestigBestelling('avondval')">
+        <input type="text" placeholder="Naam" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <button type="submit" class="button">Verzenden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lachstorm (unhappy) -->
+  <div class="show">
+    <img src="/Images/lachstorm.png" alt="ComedyNight">
+    <div class="show-details">
+      <h2>ComedyNight - Lachstorm</h2>
+      <p class="info">Datum: 21-06-2025 om 21:00</p>
+      <p>“Een avond vol humor met top cabaretiers.”</p>
+      <p class="prijs">Tickets: €120</p>
+      <button class="button" onclick="bestelTickets('lachstorm')">Bestel tickets</button>
+      <div id="message-lachstorm" class="message"></div>
+    </div>
+  </div>
+
+  <!-- Jazz (happy) -->
+  <div class="show">
+    <img src="/Images/jazz.png" alt="Jazz en meer">
+    <div class="show-details">
+      <h2>MuziekAvond - Jazz en meer</h2>
+      <p class="info">Datum: 22-06-2025 om 19:30</p>
+      <p>“Live jazzoptredens van lokale artiesten.”</p>
+      <p class="prijs">Tickets: €100</p>
+      <button class="button" onclick="bestelTickets('jazz')">Bestel tickets</button>
+      <div id="message-jazz" class="message"></div>
+      <form id="form-jazz" class="ticket-form" onsubmit="return bevestigBestelling('jazz')">
+        <input type="text" placeholder="Naam" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <button type="submit" class="button">Verzenden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- DroomBoom (unhappy) -->
+  <div class="show">
+    <img src="/Images/droomboom.png" alt="KinderAvond">
+    <div class="show-details">
+      <h2>KinderAvond - De DroomBoom</h2>
+      <p class="info">Datum: 23-06-2025 om 14:00</p>
+      <p>“Een magisch verhaal voor kinderen van 4 tot 10 jaar.”</p>
+      <p class="prijs">Tickets: €80</p>
+      <button class="button" onclick="bestelTickets('droomboom')">Bestel tickets</button>
+      <div id="message-droomboom" class="message"></div>
+    </div>
+  </div>
+
+  <!-- Filmklassieker (happy) -->
+  <div class="show">
+    <img src="/Images/filmklassieker.png" alt="Filmklassieker">
+    <div class="show-details">
+      <h2>FilmAvond - Klassieker op Groot Scherm</h2>
+      <p class="info">Datum: 24-06-2025 om 20:30</p>
+      <p>“Herbeleef een legendarische filmavond met een tijdloze klassieker.”</p>
+      <p class="prijs">Tickets: €90</p>
+      <button class="button" onclick="bestelTickets('filmklassieker')">Bestel tickets</button>
+      <div id="message-filmklassieker" class="message"></div>
+      <form id="form-filmklassieker" class="ticket-form" onsubmit="return bevestigBestelling('filmklassieker')">
+        <input type="text" placeholder="Naam" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <button type="submit" class="button">Verzenden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Ritmes (unhappy) -->
+  <div class="show">
+    <img src="/Images/ritmes.png" alt="Ritmes">
+    <div class="show-details">
+      <h2>DansAvond - Ritmes van de Wereld</h2>
+      <p class="info">Datum: 25-06-2025 om 18:00</p>
+      <p>“Een dansvoorstelling met ritmes uit alle windstreken.”</p>
+      <p class="prijs">Tickets: €110</p>
+      <button class="button" onclick="bestelTickets('ritmes')">Bestel tickets</button>
+      <div id="message-ritmes" class="message"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function bestelTickets(show) {
+    const successShows = ['avondval', 'jazz', 'filmklassieker'];
+    const errorShows = ['lachstorm', 'droomboom', 'ritmes'];
+
+    // Reset alle formulieren en meldingen
+    document.querySelectorAll('.message').forEach(m => m.textContent = '');
+    document.querySelectorAll('.ticket-form').forEach(f => f.style.display = 'none');
+
+    const messageDiv = document.getElementById(`message-${show}`);
+    const form = document.getElementById(`form-${show}`);
+
+    if (successShows.includes(show)) {
+      messageDiv.textContent = "Tickets beschikbaar. Vul het formulier in:";
+      messageDiv.className = 'message success';
+      if (form) form.style.display = 'block';
+    } else {
+      messageDiv.textContent = "Tickets niet meer beschikbaar.";
+      messageDiv.className = 'message error';
+    }
+  }
+
+  function bevestigBestelling(show) {
+    const messageDiv = document.getElementById(`message-${show}`);
+    const form = document.getElementById(`form-${show}`);
+
+    messageDiv.textContent = "Bedankt! Uw bestelling is bevestigd.";
+    messageDiv.className = 'message success';
+    if (form) form.style.display = 'none';
+    return false;
+  }
+</script>
+
+</body>
+</html>

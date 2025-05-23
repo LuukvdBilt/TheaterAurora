@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theater Ticket Scanner</title>
+  <style>
+    :root {
+      --theater-red: #8B0000;
+      --gold: #e90202;
+      --deep-red: #5a0000;
+      --background: #2c0000;
+      --text-light: #fff0e6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: var(--deep-red);
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      border: 5px solid var(--gold);
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: var(--gold);
+      font-size: 2.5em;
+    }
+
+    input[type="text"] {
+      font-size: 1.3em;
+      padding: 15px 20px;
+      width: 100%;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      outline: none;
+      background-color: #330000;
+      color: var(--text-light);
+    }
+
+    input[type="text"]::placeholder {
+      color: #cfa;
+    }
+
+    #status {
+      font-size: 1.5em;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .ok {
+      background-color: #004d00;
+      color: #ccffcc;
+      border: 2px solid #00cc00;
+    }
+
+    .error {
+      background-color: #660000;
+      color: #ffcccc;
+      border: 2px solid #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎟️ Theater Ticket Scan</h1>
+    <input type="text" id="barcodeInput" placeholder="Scan of typ barcode..." autofocus />
+    <div id="status"></div>
+  </div>
+
+  <script>
+    const geldigeBarcodes = ["G21LB6682"];
+    const gebruikteBarcodes = new Set();
+
+    const input = document.getElementById("barcodeInput");
+    const status = document.getElementById("status");
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const code = input.value.trim().toUpperCase();
+        input.value = "";
+
+        if (!geldigeBarcodes.includes(code)) {
+          status.textContent = `❌ Ongeldig ticket: ${code}`;
+          status.className = "error";
+        } else if (gebruikteBarcodes.has(code)) {
+          status.textContent = `⚠️ Reeds gebruikt: ${code}`;
+          status.className = "error";
+        } else {
+          status.textContent = `✅ Geldig ticket: ${code}`;
+          status.className = "ok";
+          gebruikteBarcodes.add(code);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
