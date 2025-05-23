@@ -2,23 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // Dummydata om te simuleren (kan later via fetch vervangen worden)
 let dummyData = [
     {
+        Id: 1,
         Nummer: 12345,
         Medewerkersoort: 'Manager',
         Isactief: 1,
         Opmerking: 'Team lead',
-        Datumaangemaakt: '2025-01-15 15:34',
-        Datumgewijzigd: '2025-05-20 15:36',
+        Datumaangemaakt: '2025-05-21 10:34',
+        Datumgewijzigd: '2025-05-21 10:36',
         Voornaam: 'Jan',
         Tussenvoegsel: '',
         Achternaam: 'Jansen'
     },
     {
+        Id: 2,
         Nummer: 54321,
         Medewerkersoort: 'Admin',
         Isactief: 0,
         Opmerking: '',
-        Datumaangemaakt: '2024-11-01 19:45',
-        Datumgewijzigd: '2025-04-15 19:46',
+        Datumaangemaakt: '2025-05-21 19:45',
+        Datumgewijzigd: '2025-05-21 19:46',
         Voornaam: 'Maria',
         Tussenvoegsel: 'van',
         Achternaam: 'Dijk'
