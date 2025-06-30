@@ -75,25 +75,6 @@ CREATE TABLE Medewerker (
     FOREIGN KEY (GebruikerId) REFERENCES Gebruiker(Id)
 ) ENGINE=InnoDB;
  
-INSERT INTO Medewerker (
-    GebruikerId,
-    Nummer,
-    Medewerkersoort,
-    Isactief,
-    Opmerking,
-    Datumaangemaakt,
-    Datumgewijzigd
-) VALUES (
-    1,                    
-    1006,                 
-    'Beheerder',        
-    1,                  
-    'Eerste medewerker',  
-    NOW(6),               
-    NOW(6)                
-);
-
-
 INSERT INTO Gebruiker (
     Voornaam,
     Tussenvoegsel,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/homepagina-style.css">
   <title>Theater Homepagina</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
     </div>
   </div>
   <nav>
-    <div class="logo"> <img src="/Images/Theater-logo.png" id="LOGO"></div>
+    <div class="logo"> <img src="/img/Theater-logo.png" id="LOGO"></div>
     <div>
       <a href="index.html">Home</a>
       <a href="../Voorstellingen/Overzicht.php">Voorstellingen</a>
@@ -79,9 +79,9 @@
 
 
   <footer id="contact">
-     <div class="logo"> <img src="/Images/Theater-logo.png" id="Logo-footer"></div>
+     <div class="logo"> <img src="/img/Theater-logo.png" id="Logo-footer"></div>
     <p>&copy; 2025 Aurora Theater. Alle rechten voorbehouden.</p>
   </footer>
-  <script src="java.js"></script>
+  <script src="/js/java.js"></script>
 </body>
 </html>
