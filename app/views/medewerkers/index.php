@@ -65,10 +65,9 @@
             <?php endforeach; ?>
         </tbody>
             </table>
-            <a href="<?= URLROOT; ?>/homepages/index">home</a>
+            <a href="<?= URLROOT; ?>/dashboard/index">home</a>
         </div>
         <div class="col-1"></div>
     </div>
-    <!-- einde tabel smartphones -->
     
 <?php require_once APPROOT . '/views/includes/footer.php'; ?> 

@@ -1,20 +1,20 @@
 <?php
 
-class Medewerkers extends BaseController
+class medewerkers extends BaseController
 {
-    private $medewerkersModel;
+    private $MedewerkersModel;
 
     public function __construct()
     {
-        $this->medewerkersModel = $this->model('MedewerkersModel');
+        $this->MedewerkersModel = $this->model('MedewerkersModel');
     }
 
     public function index($message = 'none')
     {
-        $result = $this->medewerkersModel->getAllMedewerkers();
-
+        $result = $this->MedewerkersModel->getAllmedewerkers();
+        
         $data = [
-            'title' => 'Overzicht Medewerkers',
+            'title' => 'Medewerkers',
             'medewerkers' => $result,
             'message' => $message
         ];
@@ -22,58 +22,62 @@ class Medewerkers extends BaseController
         $this->view('medewerkers/index', $data);
     }
 
+    public function delete($Id)
+    {
+        $this->MedewerkersModel->delete($Id);
+        
+        header('Refresh:3 ; url=' . URLROOT . '/medewerkers/index');
+
+        $this->index('flex');
+    }
+
     public function create()
     {
         $data = [
-            'title' => 'Nieuwe Medewerker',
+            'title' => "Voeg een nieuwe medewerker toe",
             'message' => 'none'
         ];
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $this->medewerkersModel->create([
-                'gebruikerid' => $_POST['gebruikerid'],
-                'nummer' => $_POST['nummer'],
-                'soort' => $_POST['soort'],
-                'isactief' => isset($_POST['isactief']) ? 1 : 0,
-                'opmerking' => $_POST['opmerking'] ?? ''
-            ]);
-            header('Refresh: 3; url=' . URLROOT . '/medewerkers/index');
+        if ($_SERVER['REQUEST_METHOD'] == "POST")
+        {
+
+            $createData = $_POST;
+            $createData['isactief'] = isset($_POST['isactief']) ? 1 : 0;
+
+
+            $result = $this->MedewerkersModel->create($_POST);
+
             $data['message'] = 'flex';
-        }
+            
+            header('Refresh:3 ; url=' . URLROOT . '/medewerkers/index');
+
+        }        
 
         $this->view('medewerkers/create', $data);
     }
 
-    public function update($id = null)
+public function update($Id = NULL)
+{
+    $data = [
+        'title' => 'Wijzig medewerker',
+        'message' => 'none'
+    ];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        $data = [
-            'title' => 'Medewerker Wijzigen',
-            'message' => 'none'
-        ];
+        $updateData = $_POST;
+        $updateData['id'] = $Id; 
+         $updateData['isactief'] = isset($_POST['isactief']) ? 1 : 0;
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $this->medewerkersModel->update([
-                'id' => $_POST['id'],
-                'gebruikerid' => $_POST['gebruikerid'],
-                'nummer' => $_POST['nummer'],
-                'soort' => $_POST['soort'],
-                'isactief' => isset($_POST['isactief']) ? 1 : 0,
-                'opmerking' => $_POST['opmerking'] ?? ''
-            ]);
-            header('Refresh: 3; url=' . URLROOT . '/medewerkers/index');
-            $data['message'] = 'flex';
-        }
+        $this->MedewerkersModel->update($updateData);
 
-        $data['medewerker'] = $this->medewerkersModel->getMedewerkerById($id);
+        $data['message'] = 'flex';
 
-        $this->view('medewerkers/update', $data);
-    }
-
-    public function delete($id)
-    {
-        $this->medewerkersModel->delete($id);
-        $this->index('flex');
         header('Refresh: 3; url=' . URLROOT . '/medewerkers/index');
-        exit;
     }
+    
+    $data['medewerker'] = $this->MedewerkersModel->getMedewerkerById($Id);        
+
+    $this->view('medewerkers/update', $data);        
+}
 }

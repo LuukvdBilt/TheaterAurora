@@ -67,7 +67,7 @@ CREATE TABLE Medewerker (
     GebruikerId INT NOT NULL,
     Nummer MEDIUMINT NOT NULL UNIQUE,
     Medewerkersoort VARCHAR(20) NOT NULL,
-    Isactief BIT NOT NULL DEFAULT 1,
+    Isactief BIT NULL DEFAULT 1,
     Opmerking VARCHAR(250),
     Datumaangemaakt DATETIME(6) NOT NULL,
     Datumgewijzigd DATETIME(6) NOT NULL,
