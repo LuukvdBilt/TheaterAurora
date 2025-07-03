@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #c0392b;
         }
         .melding {
-            color: #e74c3c;
+            color:rgb(4, 188, 16);
             margin-top: 1rem;
             font-weight: bold;
             text-align: center;
