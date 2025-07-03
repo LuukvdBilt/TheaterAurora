@@ -9,6 +9,12 @@
         </div>
         <div class="col-3"></div>
     </div>
+    <?php if (!empty($data['error'])): ?>
+    <div class="alert alert-danger" role="alert">
+        <?= $data['error']; ?>
+    </div>
+<?php endif; ?>
+
 
     <div class="row mb-3" style="display:<?= $data['message']; ?>;">
         <div class="col-3"></div>

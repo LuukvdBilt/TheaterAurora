@@ -82,6 +82,6 @@
      <div class="logo"> <img src="/img/Theater-logo.png" id="Logo-footer"></div>
     <p>&copy; 2025 Aurora Theater. Alle rechten voorbehouden.</p>
   </footer>
-  <script src="/js/java.js"></script>
+  <script src="/js/homepagina.js"></script>
 </body>
 </html>

@@ -59,16 +59,21 @@
                         <a href="<?= URLROOT; ?>/medewerkers/update/<?= $medewerker->Id; ?>" class="btn btn-sm btn-success">Wijzig</a>
                     </td>
                     <td>
-                        <a href="<?= URLROOT; ?>/medewerkers/delete/<?= $medewerker->Id; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Weet je zeker dat je deze medewerker wilt verwijderen?');">Verwijder</a>
+                       <a href="<?= URLROOT; ?>/medewerkers/delete/<?= $medewerker->Id; ?>" 
+                            class="btn btn-sm btn-danger" 
+                            onclick="return bevestigDelete(this);" 
+                            data-isactief="<?= $medewerker->Isactief; ?>">
+                            Verwijder
+                        </a>
+
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
             </table>
-            <a href="<?= URLROOT; ?>/homepages/index">home</a>
+            <a href="<?= URLROOT; ?>/dashboard/index">home</a>
         </div>
         <div class="col-1"></div>
     </div>
-    <!-- einde tabel smartphones -->
     
 <?php require_once APPROOT . '/views/includes/footer.php'; ?> 

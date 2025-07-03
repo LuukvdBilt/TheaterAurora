@@ -1,9 +1,10 @@
-function bevestigDelete()
-{
-    answer = confirm('Weet u zeker dat u dit record wilt verwijderen?');
-    if (answer) {
-        return true
-    } else {
+function bevestigDelete(el) {
+    const isActief = el.getAttribute('data-isactief');
+
+    if (isActief === "1") {
+        alert("Deze medewerker is actief en kan niet worden verwijderd.");
         return false;
     }
+
+    return confirm("Weet je zeker dat je deze medewerker wilt verwijderen?");
 }
