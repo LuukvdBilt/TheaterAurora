@@ -65,7 +65,7 @@
       <img src="https://percossa.nl/images/jcogs_imgv1/cache/droom-scene_-_28de80_-_e474eb9b62e73892c6e6cefa806a28e0041c03f6.webp" id="IMG4">
       <a href="#"><button id="ticket-btn">Bestel tickets</button></a>
       <p id="tickets-over">Tickets: 80</p>
-      <p id="Introductie">"Een magisch verhaal voor kinderen van 4 tot 10 jaar"</p>
+      <p id="Introductie"> "Een magisch verhaal voor kinderen van 4 tot 10 jaar"</p>
     </div>
   </div>
 

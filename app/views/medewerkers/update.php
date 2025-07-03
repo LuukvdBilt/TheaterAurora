@@ -9,13 +9,14 @@
         </div>
         <div class="col-3"></div>
     </div>
+<!--als data leeg is een error-->
     <?php if (!empty($data['error'])): ?>
     <div class="alert alert-danger" role="alert">
         <?= $data['error']; ?>
     </div>
 <?php endif; ?>
 
-
+    <!--Melding als het succesvol gewijzigd is-->
     <div class="row mb-3"style="display:<?= $data['message']; ?>" >
         <div class="col-3"></div>
         <div class="col-6">
@@ -25,7 +26,7 @@
         </div>
         <div class="col-3"></div>
     </div>
-       
+    <!-- Form om medewerker te updaten-->
     <div class="row mb-3">
         <div class="col-3"></div>
         <div class="col-6">
@@ -37,7 +38,7 @@
             </div>
             <div class="mb-3">
                 <label for="nummer" class="form-label">Nummer</label>
-                <input value="<?= $data['medewerker']->Nummer; ?>"  type="number" class="form-control" id="nummer" name="nummer" required>
+                <input value="<?= $data['medewerker']->Nummer; ?>"  type="number" class="form-control" id="nummer" name="nummer"  min="1000" max="9999" required>
             </div>
             <div class="mb-3">
                 <label for="soort" class="form-label">Soort</label>
@@ -53,6 +54,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Opslaan</button>
         </form>
+    <!--Als de medewerker niet is gevonden een alert-->
     <?php else: ?>
         <div class="alert alert-danger">Medewerker niet gevonden!</div>
     <?php endif; ?>

@@ -9,13 +9,14 @@
         </div>
         <div class="col-3"></div>
     </div>
+<!--als data leeg is een error-->
     <?php if (!empty($data['error'])): ?>
     <div class="alert alert-danger" role="alert">
         <?= $data['error']; ?>
     </div>
 <?php endif; ?>
 
-
+    <!--Als de medewerker succesvol is toegevoegd-->
     <div class="row mb-3" style="display:<?= $data['message']; ?>;">
         <div class="col-3"></div>
         <div class="col-6">
@@ -26,9 +27,8 @@
         <div class="col-3"></div>
     </div>
 
-    
+    <!--model om een medewerker aan te maken-->
 <div class="container mt-3">
-    <h3><?= $data['title']; ?></h3>
     <form action="<?= URLROOT; ?>/medewerkers/create" method="post">
         <div class="mb-3">
             <label for="gebruikerid" class="form-label">GebruikerId</label>
@@ -36,7 +36,7 @@
         </div>
         <div class="mb-3">
             <label for="nummer" class="form-label">Nummer</label>
-            <input type="number" class="form-control" id="nummer" name="nummer" required>
+            <input type="number" class="form-control" id="nummer" name="nummer" min="1000" max="9999" required>
         </div>
         <div class="mb-3">
             <label for="soort" class="form-label">Soort</label>

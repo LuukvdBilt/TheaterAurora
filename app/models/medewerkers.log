@@ -1,0 +1,5 @@
+[2025-07-03 19:31:28] CREATE: Medewerker aangemaakt met GebruikerId 3 en Nummer 5678
+[2025-07-03 19:32:33] CREATE: Medewerker aangemaakt met GebruikerId 4 en Nummer 7654
+[2025-07-03 19:33:57] ACTION: DELETE | DATA: {"Id":"67"}
+[2025-07-03 19:34:13] ACTION: CREATE | DATA: {"gebruikerid":"3","nummer":"5643","soort":"Popcorn schepper","isactief":1,"opmerking":"Nieuwe popcorn schepper"}
+[2025-07-03 19:34:29] ACTION: UPDATE | DATA: {"gebruikerid":"3","nummer":"5643","soort":"Popcorn schepper","opmerking":"Nieuwe popcorn schepper","id":"68","isactief":0}

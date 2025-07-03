@@ -1,3 +1,4 @@
+//verwijder functie, kan alleen verwijderd worden als de status vna de medewerker inactief is
 function bevestigDelete(el) {
     const isActief = el.getAttribute('data-isactief');
 
