@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Voorstellingen/Overzicht.php">
+                            <a class="nav-link" href="/crud/Voorstellingen/Overzicht.php">
                                 <i class="fa fa-line-chart"></i>Voorstellingen
                             </a>
                         </li>

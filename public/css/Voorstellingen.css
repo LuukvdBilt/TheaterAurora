@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #ddd;
+    margin: 0;
+    padding: 20px;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kaart {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kaart img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    max-height: 180px;
+}
+
+.kaart h3 {
+    margin: 10px 0 5px 0;
+    color: #fff;
+}
+
+.kaart p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #ccc;
+}
+
+.beschikbaarheid.beschikbaar {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.beschikbaarheid.niet-beschikbaar {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.toevoegen-button {
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    user-select: none;
+    display: inline-block;
+}
+
+.toevoegen-button:hover {
+    background-color: #219150;
+}
+
+form .toevoegen-button {
+    background-color: #555;
+}
+
+form .toevoegen-button:hover {
+    background-color: #444;
+}
+
+/* Modal styling */
+#editModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    max-height: 90vh;
+    color: #fff;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0,0,0,0.9);
+}
+
+#editMessage {
+    display: none;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-align: center;
+    /* kleur en achtergrondkleur via JS */
+}
+
+#editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: calc(90vh - 70px);
+    padding-right: 5px;
+}
+
+#editForm label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#editForm input[type="text"],
+#editForm input[type="date"],
+#editForm input[type="time"],
+#editForm input[type="number"],
+#editForm select,
+#editForm textarea {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    resize: none;
+}
+
+#editForm textarea {
+    min-height: 40px;
+}
+
+#editForm input:focus,
+#editForm select:focus,
+#editForm textarea:focus {
+    outline: 2px solid #27ae60;
+    background-color: #2a2a2a;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.modal-buttons button[type="submit"] {
+    background-color: #27ae60;
+}
+
+.modal-buttons button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+.modal-buttons button#closeModal {
+    background: #555;
+}
+
+.modal-buttons button#closeModal:hover {
+    background-color: #444;
+}
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kaart {
+        width: 90%;
+    }
+
+    #editModal {
+        width: 90%;
+        max-height: 90vh;
+    }
+}

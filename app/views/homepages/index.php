@@ -18,7 +18,7 @@
     <div class="logo"> <img src="/img/Theater-logo.png" id="LOGO"></div>
     <div>
       <a href="index.html">Home</a>
-      <a href="../Voorstellingen/Overzicht.php">Voorstellingen</a>
+      <a href="/crud/Voorstellingen/Overzicht.php">Bekijk Voorstellingen</a>
       <a href="#">Contact</a>
       <a href="../Dashboard/index.php">Dashboard</a>
        <a href="../Tickets/tickets.html">Tickets</a>
@@ -28,7 +28,7 @@
   </nav>
   <div class="banner">
     <div class="bannerItems">
-      <a href="#"></a><button id="Banneritem1">Bekijk de nieuwste voorstellingen</button></a>
+      <a href="/crud/Voorstellingen/Overzicht.php"></a><button id="Banneritem1">Bekijk de nieuwste voorstellingen</button></a>
       <a href="#"><button id="Banneritem2">Nu bekijken, gelijk genieten -></button></a>
     </div>
   </div>
